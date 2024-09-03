@@ -23,35 +23,28 @@ public class BasePage {
     public void click(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
-
-    public void type(WebElement element, String text) {
-        wait.until(ExpectedConditions.visibilityOf(element));
-        element.clear();
-        element.sendKeys(text);
-    }
-
-    public String getText(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element));
-        return element.getText();
-    }
-
+//
+//    public void type(WebElement element, String text) {
+//        wait.until(ExpectedConditions.visibilityOf(element));
+//        element.clear();
+//        element.sendKeys(text);
+//    }
+//
+//    public String getText(WebElement element) {
+//        wait.until(ExpectedConditions.visibilityOf(element));
+//        return element.getText();
+//    }
+//
     public void waitForVisibility(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-
-    public boolean isElementDisplayed(WebElement element) {
-        try {
-            return element.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public void waitForElementToBeClickable(WebElement element) {
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
-
-    public void navigateTo(String url) {
-        driver.get(url);
-    }
+//
+//
+//    public void waitForElementToBeClickable(WebElement element) {
+//        wait.until(ExpectedConditions.elementToBeClickable(element));
+//    }
+//
+//    public void navigateTo(String url) {
+//        driver.get(url);
+//    }
 }
