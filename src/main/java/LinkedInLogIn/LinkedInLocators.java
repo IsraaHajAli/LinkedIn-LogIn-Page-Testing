@@ -40,4 +40,8 @@ public class LinkedInLocators {
     @FindBy(id="ember27")
     public static WebElement profileIcon;
     
+    // error message
+    @FindBy(id="error-for-password")
+    public static WebElement errorMessage;
+    
 }
