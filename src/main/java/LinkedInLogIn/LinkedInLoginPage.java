@@ -33,6 +33,16 @@ public class LinkedInLoginPage extends BasePage {
         //WebElement profileIcon = driver.findElement(LinkedInLocators.profileIcon);
         return profileIcon.isDisplayed();
     }
+    
+    public boolean isErrorMessageVisible() {
+    	WebElement errorMessage = LinkedInLocators.errorMessage;
+    	return errorMessage.isDisplayed();
+    	}
+    public boolean isForgotButtonVisible() {
+    	WebElement forgotButton = LinkedInLocators.forgotButton;
+    	waitForVisibility(forgotButton);
+    	return forgotButton.isDisplayed();
+    }
 
     public void login(String username, String password) {
         enterUsername(username);
